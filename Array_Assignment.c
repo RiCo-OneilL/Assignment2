@@ -19,6 +19,8 @@ int main()
     {
         printf("%d,",Original[i]);
     }
+    
+    //Deletion process
      Original[3]= Original[4];
      Original[4]= Original[5];
      Original[5]= 0;
