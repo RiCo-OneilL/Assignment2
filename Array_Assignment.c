@@ -38,7 +38,7 @@ int main()
     //Deletion process
     printf("\n What index would you like to delete its value?\n");
     scanf("%d", &Delete);
-    if (Delete > 0 && Delete <6);
+    if (Delete > 0 && Delete <6)
     {
      {
         for (Delete ; Delete < 6 ; Delete++)
@@ -55,13 +55,13 @@ int main()
         printf("%d,",Original[i]);
         }
     }
-     /* 
-       else
+     
+     else
     {
         printf("Invalid index! \n");
         return 1;
     }
-    */
+    
 
 return 0;
 
