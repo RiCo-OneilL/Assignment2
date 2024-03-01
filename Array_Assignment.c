@@ -7,7 +7,7 @@ int main()
     int Insert;
     int Delete;
     int r;
-    int Original[6]={2,3,5,7,9,0};
+    int Original[6]={2,3,5,7,9};
        printf("Original Array\n");
         for(int i=0; i<6 ; i++)
     {
@@ -35,10 +35,26 @@ int main()
         printf("Invalid index! \n");
         return 1;
     }
+    int tempStorage;
+
+    for (int i = 0; i < 6; i++){;
+        for (int j = i + 1; j < 6; j++){
+            if (Original[j] < Original[i]){
+                tempStorage = Original[j];
+                Original[j] = Original[i];
+                Original[i] = tempStorage;
+            }
+        }
+    }
+     printf("\nSorted array\n");
+        for(int i=0; i<6 ; i++)
+    {
+        printf("%d,",Original[i]);
+    }
     //Deletion process
     printf("\n What index would you like to delete its value?\n");
     scanf("%d", &Delete);
-    if (Delete > 0 && Delete <6)
+    if (Delete >= 0 && Delete <=6)
     {
      {
         for (Delete ; Delete < 6 ; Delete++)
@@ -48,7 +64,7 @@ int main()
         Original[5]= 0;
      }
     
-     printf("\nArray after deletion of the inserted number\n");
+     printf("\nArray after deletion of the number\n");
 
      for(int i=0; i<6 ; i++)
         {
